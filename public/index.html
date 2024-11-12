@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo App</title>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        button {
+            margin-left: 12px;
+            padding: 5px;
+            border-radius: 50px;
+            border: none;
+        }
+        .input{
+            padding: 15px;
+            text-align: center;
+        }
+        #addTaskButton{
+            background-color: rgb(46, 46, 253);
+            color: white;
+        }
+        #deleteAllButton{
+            background-color: rgb(177, 3, 3);
+            color: white;
+        }
+        #addTaskButton:hover{
+            background-color: rgb(98, 98, 243);
+        }
+        #deleteAllButton:hover{
+            background-color: rgb(241, 66, 66);
+        }
+        </style>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+        <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;text-align: center;">Todo App</h1>
+        <div style="text-align: center;">
+            <input class="input" placeholder="Enter items.." id="input" type="text">
+            <button id="addTaskButton" onclick="add()">Add items</button>
+            <button id="deleteAllButton" onclick="dell()">Delete All items</button>
+
+        </div>
+        <ul id="list"></ul>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
